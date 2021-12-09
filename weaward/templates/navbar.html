@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navi">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+ 
+   </button>
+   <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+     <div class="navbar-nav text-dark">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+           <a class="nav-link active text-dark" aria-current="page" href="/">&nbsp; &nbsp; Home</a>
+         </li>
+       </ul>
+       <li class="nav-item">
+         <a class="nav-link active text-dark" aria-current="page" href="/profile/">Profile</a>
+       </li>
+     </div>
+     {% if user.is_authenticated %}
+ 
+             <li class="dropdown btn btn-default">
+                 <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" 
+                      style="font-weight: 700;"><i class="far fa-user"></i>
+                     
+                 </a>
+                 <ul class="dropdown-menu" role="menu" style="font-weight: 700; text-decoration: none;" >
+                     <li>
+                         <a class='btn btn-default' href="/profile" >Post Project</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="btn btn-default " href="/admin" 
+                             >Dashboard</a>
+                     </li>
+                     <li>
+                         <a class='btn btn-default' href="/accounts/register" >Register</a>
+                     </li>
+                     <li>
+ 
+                         <a class='btn btn-default' href="/admin/password_change" >Change
+                             Password</a>
+                     </li>
+                     <li>
+                         <a class='btn btn-default' href="/logout">Log Out</a>
+                     </li>
+                 </ul>
+             </li>
+         
+         {% else %}
+         <li>
+             <a class='btn btn-default' href="/login">Login</a>
+         </li>
+         {% endif %}
+    
+   <div class="col-sm-4 col-md-4 navbar-right">
+ 
+        </div>
+   <hr>
+ </nav>
+ 
+ 
+ 
