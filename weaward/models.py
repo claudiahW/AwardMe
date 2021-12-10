@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 '''
-create models class
+create profile model class
 '''
 
 
