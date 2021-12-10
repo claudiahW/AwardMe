@@ -3,6 +3,8 @@ from django.http  import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile,Project
+from.forms import PostForm
+from django.shortcuts import render,redirect, get_object_or_404
 # Create your views here.
 
 def index(request):
@@ -24,3 +26,18 @@ def profile(request):
     project = Project.objects.filter(user_id=current_user.id)
 
     return render(request,"project.html",{'project':project})
+
+
+@login_required(login_url='/accounts/login/')
+def post(request):
+    if request.method == "POST":
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            project = form.save(commit=False)
+            project.save()
+        return redirect('/')
+    else:
+        form = PostForm()
+    return render(request, 'upload_project.html', {"form": form})  
+
+       
