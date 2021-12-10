@@ -38,6 +38,6 @@ def post(request):
         return redirect('/')
     else:
         form = PostForm()
-    return render(request, 'upload_project.html', {"form": form})  
+    return render(request, 'post.html', {"form": form})  
 
        
