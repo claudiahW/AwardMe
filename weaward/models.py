@@ -41,7 +41,7 @@ Create project class
 '''
 
 class Project(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,null=True)
     title = models.CharField(max_length=250)
     description = models.TextField()
     image = CloudinaryField("image")

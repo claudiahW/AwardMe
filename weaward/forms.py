@@ -5,14 +5,18 @@ from django import forms
 class PostForm(ModelForm):
     class Meta:
         model=Project
-        field =('title'
-        'description'
-        'image'
-        'url'
-        'location'
+        fields =('title',
+        'description',
+        'image',
+        'url',
+        'location',
         )
 
 
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('bio', 'profile_pic', 'contact',)
 
 
 
