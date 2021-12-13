@@ -12,11 +12,9 @@ class PostForm(ModelForm):
         'location',
         )
 
-
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
+        exclude = ['user']
         fields = ('bio', 'profile_pic', 'contact',)
-
-
 
