@@ -4,7 +4,7 @@
 {{block.super}}
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="column">
       <div class="col-md-6">
         {% for proj in project %}
         <div class="card-group">
@@ -13,6 +13,10 @@
             <div class="card-body">
               <h5 class="card-title">{{proj.project_name}}</h5>
               <p class="card-text">{{proj.description}}</p>
+              
+              <button>
+                <a href="{{proj.url}}">project url</a>
+              </button>
   
             </div>
             <div class="card-footer">
