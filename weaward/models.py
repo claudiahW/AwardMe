@@ -13,7 +13,7 @@ create profile model class
 
 
 class Profile(models.Model):
-  profile_pic = models.ImageField(default='default.jpg',upload_to='profile/')
+  profile_pic = CloudinaryField('image')
   bio = models.TextField()
   contact=models.CharField(max_length=100)
   user = models.OneToOneField(User,on_delete = models.CASCADE)
@@ -83,3 +83,12 @@ class Project(models.Model):
 
     def _str_(self):
         return self.title
+
+    @classmethod
+    def search_project_name(cls, search_term):
+        images = cls.objects.filter(
+        title__icontains=search_term)
+        return images    
+
+    def str(self):
+        return self.user.username    
