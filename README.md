@@ -7,7 +7,7 @@
 Claudiah Wanjiru
   
 # Description  
-Accolades is a platform where different creators get to  post their works,,,then they get to receive feedback based on certain criteria i.e,,design,usability and content,,.from the different reviewers.
+AwardUs is a platform where different creators get to  post their projects and to receive feedback based on certain criteria i.e,,design,usability and content from the different users.
   
 ##  Live Link  
 
@@ -28,11 +28,10 @@ Accolades is a platform where different creators get to  post their works,,,then
 
 ## Clone the repository:  
  
-https://github.com/lizgi/lit_awards
 
 ## Navigate into the folder and install requirements 
 
- cd accolades pip install -r requirements.txt 
+ cd awardus pip install -r requirements.txt 
 
 ## Install and activate Virtual 
 
@@ -51,10 +50,6 @@ python manage.py makemigrations photos
  bash 
  python manage.py migrate 
 
-##### Run the application  
- bash 
- python manage.py runserver 
- 
 ##### Running the application  
  bash 
  python manage.py server 
@@ -74,7 +69,11 @@ Open the application on your browser `127.0.0.1:8000`.
   
   
 ## Known Bugs  
-* There are no known bug
+* There are no known bugs kindly contact me in case you spot one.
+
+## Contact details
+Reach me on murungiclaud@gmail.com or
+claudiah.wanjiru@students.moringaschool.com
 
 
-## License
+## License 
