@@ -11,6 +11,7 @@ AwardUs is a platform where different creators get to  post their projects and t
   
 ##  Live Link  
 
+https://awardusabc.herokuapp.com/
 
 
  
@@ -28,6 +29,7 @@ AwardUs is a platform where different creators get to  post their projects and t
 
 ## Clone the repository:  
  
+ https://github.com/claudiahW/AwardMe
 
 ## Navigate into the folder and install requirements 
 
